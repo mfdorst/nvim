@@ -11,7 +11,7 @@ vim.opt.breakindent = true
 vim.opt.cursorline = true
 -- Use spaces rather than tabs
 vim.opt.expandtab = true
-vim.opt.hlsearch = true
+vim.opt.hlsearch = false
 -- Case-insensitive search, unless \C present in search term. See `smartcase`.
 vim.opt.ignorecase = true
 -- Sets how neovim will display certain whitespace characters in the editor.
@@ -44,10 +44,23 @@ vim.opt.wrap = true
 
 -- [[ Keymaps ]]
 
-vim.keymap.set('n', 's', '<Nop>')
+-- vim.keymap.set('n', 's', '<Nop>')
+
+-- Leave insert mode
+vim.keymap.set('i', '<C-;>', '<Esc>')
+
+-- Redo
+vim.keymap.set('n', 'R', '<C-r>')
 
 -- Clear highlighting on Esc. See `hlsearch`.
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+
+-- Copy and paste from the clipboard
+vim.keymap.set('n', '<leader>y', '"+y')
+vim.keymap.set('n', '<leader>Y', '"+Y')
+vim.keymap.set('n', '<leader>p', '"+p')
+vim.keymap.set('n', '<leader>P', '"+P')
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })

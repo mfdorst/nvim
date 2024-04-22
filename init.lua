@@ -37,7 +37,7 @@ vim.opt.splitbelow = true
 vim.opt.swapfile = false
 -- Hard wrap text at 100 characters
 -- vim.opt.textwidth = 99
-vim.opt.undodir = '$HOME/.config/nvim/undodir'
+vim.opt.undodir = os.getenv 'HOME' .. '/.config/nvim/undodir'
 vim.opt.undofile = true
 -- Enable word wrap
 vim.opt.wrap = true

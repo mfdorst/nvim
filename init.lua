@@ -56,11 +56,13 @@ vim.keymap.set('n', 'R', '<C-r>')
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
--- Copy and paste from the clipboard
+-- Cut, copy and paste from the clipboard
 vim.keymap.set({ 'n', 'v' }, '<leader>y', '"+y')
 vim.keymap.set({ 'n', 'v' }, '<leader>p', '"+p')
 vim.keymap.set('n', '<leader>Y', '"+Y')
 vim.keymap.set('n', '<leader>P', '"+P')
+vim.keymap.set('n', '<leader>d', '"+d')
+vim.keymap.set('n', '<leader>dd', '"+dd')
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
